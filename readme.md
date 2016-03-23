@@ -10,7 +10,7 @@ Things installed via Homebrew.
 brew list > ~/Dropbox/brew.txt
 ```
 
-Things installed via Npm
+Things installed globally via Npm
 
 ```bash    
 ls `npm root -g` > ~/Dropbox/npm.txt
