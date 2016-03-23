@@ -16,6 +16,8 @@ Things installed via Npm
 ls `npm root -g` > ~/Dropbox/npm.txt
 ```
 
+![Screenshot](https://cloud.githubusercontent.com/assets/307676/13986111/dd7cd7e0-f100-11e5-9f9b-a9851f1cbe86.png
+
 ## Run backup every time you login to your computer
 
 1. Start Automator.app
@@ -27,6 +29,4 @@ ls `npm root -g` > ~/Dropbox/npm.txt
 7. Save it somewhere, ex to your ``Applications`` folder
 8. Add this app to System Preferences -> Account -> Login items
 9. Done!
-
-![Screenshot](https://cloud.githubusercontent.com/assets/307676/13986111/dd7cd7e0-f100-11e5-9f9b-a9851f1cbe86.png
 
