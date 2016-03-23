@@ -1,6 +1,6 @@
 # Backup NPM and Homebrew packages to Dropbox
 
-Setting up a new computer? Hard to remember which apps and packages you have installed via [Npm](https://www.npmjs.com/) and [Homebrew](http://brew.sh/).
+Setting up a new computer? Keep track of apps and packages you have installed via [Npm](https://www.npmjs.com/) and [Homebrew](http://brew.sh/).
 
 ## Manually
 
