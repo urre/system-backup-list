@@ -6,11 +6,15 @@ Setting up a new computer? Hard to remember which apps and packages you have ins
 
 Things installed via Homebrew.
 
-    brew list > ~/Dropbox/brew.txt
+```bash
+brew list > ~/Dropbox/brew.txt
+```
 
 Things installed via Npm
-    
-    ls `npm root -g` > ~/Dropbox/npm.txt
+
+```bash    
+ls `npm root -g` > ~/Dropbox/npm.txt
+```
 
 ## Run backup every time you login to your computer
 
