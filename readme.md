@@ -1,4 +1,4 @@
-# Backup NPM and Homebrew packages to Dropbox
+# Backup a list of system installations to Dropbox
 
 Just a simple way to backup a list of apps and packages you have installed via [Npm](https://www.npmjs.com/) and [Homebrew](http://brew.sh/).
 
@@ -14,6 +14,19 @@ Things installed globally via Npm
 
 ```bash    
 ls `npm root -g` > ~/Dropbox/npm.txt
+```
+
+All the applications installed on your Mac
+
+```bash    
+cd /Applications && ls > ~/Dropbox/apps.txt
+```
+
+Installed fonts
+
+```bash
+cd /Library/Fonts/ && ls > ~/Dropbox/fonts.txt
+username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/fonts-user.txt
 ```
 
 ## Run backup every time you login to your computer
