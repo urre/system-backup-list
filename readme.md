@@ -1,6 +1,6 @@
-# Backup a list of system installations to Dropbox
+# Backup a list of things on your computer to Dropbox
 
-Just a simple way to backup a list of apps and packages you have installed via [Npm](https://www.npmjs.com/) and [Homebrew](http://brew.sh/).
+Just a simple way to backup a list of apps, fonts and packages you have installed on your Mac.
 
 ## Manually
 
