@@ -29,6 +29,9 @@ cd /Library/Fonts/ && ls > ~/Dropbox/fonts.txt
 username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/fonts-user.txt
 ```
 
+![automator_icon](https://cloud.githubusercontent.com/assets/307676/14935295/45bf18a2-0ecc-11e6-9105-3a0857d14735.png)
+
+
 ## Run backup every time you login to your computer
 
 1. Start Automator.app
@@ -42,5 +45,3 @@ username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/fonts-user
 9. Done!
 
 
-#### Screenshot from Automator (Swedish)
-![Screenshot](https://cloud.githubusercontent.com/assets/307676/13986111/dd7cd7e0-f100-11e5-9f9b-a9851f1cbe86.png)
