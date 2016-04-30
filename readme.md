@@ -29,8 +29,7 @@ cd /Library/Fonts/ && ls > ~/Dropbox/fonts.txt
 username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/fonts-user.txt
 ```
 
-![automator_icon](https://cloud.githubusercontent.com/assets/307676/14935295/45bf18a2-0ecc-11e6-9105-3a0857d14735.png)
-
+<img src="https://cloud.githubusercontent.com/assets/307676/14935295/45bf18a2-0ecc-11e6-9105-3a0857d14735.png" alt="Automator" height="100">
 
 ## Run backup every time you login to your computer
 
