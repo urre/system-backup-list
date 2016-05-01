@@ -30,7 +30,7 @@ username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/fonts-user
 
 ### Notes
 
-I'm using the full paths to the binarys here. You can also just use ``brew`` or ``npm``, but that might not work when you use it in Automator or Alfred. And, just change paths if using other.
+I'm using the full paths to the binaries here. You can also just use ``brew`` or ``npm``, but that might not work when you use it in Automator or Alfred. And, just change paths if using other.
 
 <img src="https://cloud.githubusercontent.com/assets/307676/14935295/45bf18a2-0ecc-11e6-9105-3a0857d14735.png" alt="Automator" height="100">
 
