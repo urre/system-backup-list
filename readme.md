@@ -9,11 +9,10 @@ All the applications installed on your Mac
 ```bash    
 cd /Applications && ls > ~/Dropbox/apps.txt
 ```
-
 Things installed via Homebrew.
 
 ```bash
-brew list > ~/Dropbox/brew.txt
+/usr/local/bin/brew list > ~/Dropbox/brew.txt
 ```
 
 Things installed globally via Npm
@@ -21,6 +20,10 @@ Things installed globally via Npm
 ```bash    
 cd /usr/local/lib/node_modules && ls > ~/Dropbox/npm.txt
 ```
+
+### Notes
+
+I'm using the full paths to the binarys here. You can also just use ``brew`` or ``npm``, but that might not work when you use it in Automator or Alfred. And, just change paths if using other.
 
 Installed fonts
 
