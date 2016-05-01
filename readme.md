@@ -4,6 +4,12 @@ Just a simple way to backup a list of apps, fonts and packages you have installe
 
 ## Manually
 
+All the applications installed on your Mac
+
+```bash    
+cd /Applications && ls > ~/Dropbox/apps.txt
+```
+
 Things installed via Homebrew.
 
 ```bash
@@ -13,13 +19,7 @@ brew list > ~/Dropbox/brew.txt
 Things installed globally via Npm
 
 ```bash    
-ls `npm root -g` > ~/Dropbox/npm.txt
-```
-
-All the applications installed on your Mac
-
-```bash    
-cd /Applications && ls > ~/Dropbox/apps.txt
+cd /usr/local/lib/node_modules && ls > ~/Dropbox/npm.txt
 ```
 
 Installed fonts
@@ -43,4 +43,8 @@ username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/fonts-user
 8. Add this app to System Preferences -> Account -> Login items
 9. Done!
 
+<img src="http://cdn.makeuseof.com/wp-content/uploads/2013/04/Alfred_icon.jpg?6b9ecc" alt="Alfred" height="100">
 
+## Alfred Workflow
+
+Use the ``system-list-backup.alfredworkflow`` file in this repo.
