@@ -48,3 +48,9 @@ username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/fonts-user
 ## Alfred Workflow
 
 Use the ``system-list-backup.alfredworkflow`` file in this repo.
+
+![alfred-1](https://cloud.githubusercontent.com/assets/307676/14941464/1137a8c0-0f9d-11e6-85f2-26759ad1b53e.jpg)
+
+![alfred-2](https://cloud.githubusercontent.com/assets/307676/14941465/114fe782-0f9d-11e6-935d-caf54cfb16a3.jpg)
+
+Start typing the keyword "Backup" + enter
