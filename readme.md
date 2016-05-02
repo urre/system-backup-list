@@ -1,6 +1,6 @@
 # Backup a list of things on your computer to Dropbox
 
-Just a simple way to backup a list of apps, fonts and packages you have installed on your Mac. Run manually or schedule.
+Just a simple way to backup a list of apps, fonts and packages you have installed on your Mac -> Dropbox. Run manually or schedule. Simple and for everyone.
 
 ## Manually
 
@@ -34,14 +34,15 @@ Bash profile
 cat ~/.bash_profile > ~/Dropbox/backup/system-backup-list/bash_profile.txt
 ```
 
-Aliases
+Aliases (just an example)
 ```bash
 cat ~/.aliases > ~/Dropbox/backup/System-backup-list/aliases.txt
 ```
 
 ### Notes
 
-I'm using the full paths to the binaries here. You can also just use ``brew`` or ``npm``, but that might not work when you use it in Automator or Alfred. And, just change paths if using other.
+of course, change all this to your taste/needs.
+I'm using the full paths to some of the binaries here. You can also just use ``brew`` or ``npm``, but that might not work correctly when you use it in Automator or with Alfred. 
 
 <img src="https://cloud.githubusercontent.com/assets/307676/14966900/ee944d8c-10b4-11e6-822b-1c8e0329eb39.jpg" alt="Cron" height="100">
 
@@ -70,7 +71,7 @@ I'm using the full paths to the binaries here. You can also just use ``brew`` or
 
 <img src="http://cdn.makeuseof.com/wp-content/uploads/2013/04/Alfred_icon.jpg?6b9ecc" alt="Alfred" height="100">
 
-## Alfred Workflow
+## [Alfred Workflow](https://www.alfredapp.com/workflows/)
 
 Use the ``system-list-backup.alfredworkflow`` file in this repo.
 
