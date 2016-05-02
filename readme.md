@@ -43,8 +43,6 @@ cat ~/.aliases > ~/Dropbox/backup/System-backup-list/aliases.txt
 
 I'm using the full paths to the binaries here. You can also just use ``brew`` or ``npm``, but that might not work when you use it in Automator or Alfred. And, just change paths if using other.
 
-<img src="https://cloud.githubusercontent.com/assets/307676/14935295/45bf18a2-0ecc-11e6-9105-3a0857d14735.png" alt="Automator" height="100">
-
 <img src="https://cloud.githubusercontent.com/assets/307676/14966900/ee944d8c-10b4-11e6-822b-1c8e0329eb39.jpg" alt="Cron" height="100">
 
 ## Run backup every day at 09.00
@@ -55,6 +53,8 @@ I'm using the full paths to the binaries here. You can also just use ``brew`` or
 ```bash
 0 09 * * 1-5 /mypath/system-list-backup.sh
 ```
+
+<img src="https://cloud.githubusercontent.com/assets/307676/14935295/45bf18a2-0ecc-11e6-9105-3a0857d14735.png" alt="Automator" height="100">
 
 ## Run backup every time you login to your computer
 
