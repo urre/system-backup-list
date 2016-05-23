@@ -18,3 +18,22 @@ cat ~/.bash_profile > ~/Dropbox/backup/system-backup-list/bash_profile.txt
 
 # Aliases
 cat ~/.aliases > ~/Dropbox/backup/System-backup-list/aliases.txt
+
+# SSH
+cp ~/.ssh/config ~/Dropbox/backup/System-backup-list/ssh_config.txt
+
+# Hosts
+cp /etc/hosts ~/Dropbox/backup/System-backup-list/hosts.txt
+
+# Apache
+cp /etc/apache2/extra/httpd-vhosts.conf ~/Dropbox/backup/System-backup-list/vhosts.conf.txt
+
+# Gitconfig
+cp ~/.gitconfig ~/Dropbox/backup/System-backup-list/gitconfig.txt
+
+# Sublime
+cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/Preferences.sublime-settings  ~/Dropbox/backup/System-backup-list/sublime_preferences.txt
+cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/Default\ \(OSX\).sublime-keymap  ~/Dropbox/backup/System-backup-list/sublime_keymap.txt
+
+# Crontab
+crontab -l  > ~/Dropbox/backup/System-backup-list/cronjobs.txt
