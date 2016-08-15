@@ -37,3 +37,6 @@ cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/D
 
 # Crontab
 crontab -l  > ~/Dropbox/backup/System-backup-list/cronjobs.txt
+
+## VVV Customfile
+cat /Users/urbansanden/projects/vvv/Customfile > ~/Dropbox/backup/system-backup-list/customfile.txt
