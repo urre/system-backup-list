@@ -10,8 +10,8 @@
 # Paths
 username=$USER;
 vvv_path="/Users/${username}/projects/vvv"
-LOCAL_BACKUP_DIR="/Users/urbansanden/projects/vvv/www/db-backups/"
-DROPBOX="/Users/urbansanden/Dropbox/backup/system-backup-list/db-backups"
+LOCAL_BACKUP_DIR="/Users/${username}/projects/vvv/www/db-backups/"
+DROPBOX="/Users/${username}/Dropbox/backup/system-backup-list/db-backups"
 
 # 1. Make db backups inside the VVV. Separate files for each database. Use gzip.
 # Notes. Point to your VVV ip and change the credentials you need. The default mysql user/password is root/root.
