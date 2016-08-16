@@ -4,7 +4,7 @@
 # VVV Database backup
 # Make backups of all VVV databases -> Copy to Dropbox
 # Usage: ./vvv-mysql-backup.sh
-# Cron usage: 0 09 * * 1-5 /mypath && ./vvv-mysql-backup.sh >/dev/null 2>&1
+# Cron usage: 0 09 * * 1-5 cd /mypath && ./vvv-mysql-backup.sh >/dev/null 2>&1
 #------------------------------------------------------------------
 
 # Paths
