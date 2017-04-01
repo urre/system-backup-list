@@ -3,7 +3,7 @@
 # Apps
 cd /Applications && ls > ~/Dropbox/Backup/System-backup-list/apps.txt
 
-# Homebew
+# Homebrew
 /usr/local/bin/brew list > ~/Dropbox/Backup/System-backup-list/brew.txt
 
 # NPM

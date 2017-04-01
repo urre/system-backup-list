@@ -4,44 +4,56 @@ Just a simple way to backup a list of apps, fonts and packages you have installe
 
 ## Manually
 
-All the applications installed on your Mac
+### Apps
+cd /Applications && ls > ~/Dropbox/Backup/System-backup-list/apps.txt
 
-```bash    
-cd /Applications && ls > ~/Dropbox/backup/System-backup-list/apps.txt
-```
-Things installed via Homebrew.
+### Homebrew
+/usr/local/bin/brew list > ~/Dropbox/Backup/System-backup-list/brew.txt
 
-```bash
-/usr/local/bin/brew list > ~/Dropbox/backup/System-backup-list/brew.txt
-```
+### NPM modules installed globally
+cd /usr/local/lib/node_modules && ls > ~/Dropbox/Backup/System-backup-list/npm.txt
 
-Things installed globally via Npm
+### Fonts
+cd /Library/Fonts/ && ls > ~/Dropbox/Backup/System-backup-list/fonts.txt
+username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/Backup/System-backup-list/fonts-user.txt
 
-```bash    
-cd /usr/local/lib/node_modules && ls > ~/Dropbox/backup/System-backup-list/npm.txt
-```
-
-Installed fonts
-
-```bash
-cd /Library/Fonts/ && ls > ~/Dropbox/backup/System-backup-list/fonts.txt
-username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/backup/System-backup-list/fonts-user.txt
-```
-
-Bash profile
-
-```bash
+### Bash profile
 cat ~/.bash_profile > ~/Dropbox/backup/system-backup-list/bash_profile.txt
-```
 
-Aliases (just an example)
-```bash
+### Bash aliases
 cat ~/.aliases > ~/Dropbox/backup/System-backup-list/aliases.txt
-```
 
-### Notes
+### SSH config
+cp ~/.ssh/config ~/Dropbox/backup/System-backup-list/ssh_config.txt
 
-of course, change all this to your taste/needs.
+### Hosts file
+cp /etc/hosts ~/Dropbox/backup/System-backup-list/hosts.txt
+
+### Apache
+cp /etc/apache2/extra/httpd-vhosts.conf ~/Dropbox/backup/System-backup-list/vhosts.conf.txt
+
+### Gitconfig
+cp ~/.gitconfig ~/Dropbox/backup/System-backup-list/gitconfig.txt
+
+### Sublime
+cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/Preferences.sublime-settings  ~/Dropbox/backup/System-backup-list/sublime_preferences.txt
+cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/Default\ \(OSX\).sublime-keymap  ~/Dropbox/backup/System-backup-list/sublime_keymap.txt
+
+### Crontab
+crontab -l  > ~/Dropbox/backup/System-backup-list/cronjobs.txt
+
+### VVV Customfile
+cat /Users/urbansanden/projects/vvv/Customfile > ~/Dropbox/backup/system-backup-list/customfile.txt
+
+## Update
+
+Recently added a backup script for backuping databases inside [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV)
+
+    ./vvv-mysql-backup.sh
+
+## Notes
+
+Of course, change all this to your taste/needs.
 I'm using the full paths to some of the binaries here. You can also just use ``brew`` or ``npm``, but that might not work correctly when you use it in Automator or with Alfred. 
 
 <img src="https://cloud.githubusercontent.com/assets/307676/14966900/ee944d8c-10b4-11e6-822b-1c8e0329eb39.jpg" alt="Cron" height="100">
