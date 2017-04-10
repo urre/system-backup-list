@@ -15,7 +15,8 @@ Just a simple way to backup a list of apps, fonts and packages you have installe
 
 ### Fonts
     cd /Library/Fonts/ && ls > ~/Dropbox/Backup/System-backup-list/fonts.txt
-username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/Backup/System-backup-list/fonts-user.txt
+
+    username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/Backup/System-backup-list/fonts-user.txt
 
 ### Bash profile
     cat ~/.bash_profile > ~/Dropbox/backup/system-backup-list/bash_profile.txt
@@ -36,7 +37,12 @@ username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/Backup/Sys
     cp ~/.gitconfig ~/Dropbox/backup/System-backup-list/gitconfig.txt
 
 ### Sublime
+
+Settings
+
     cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/Preferences.sublime-settings  ~/Dropbox/backup/System-backup-list/sublime_preferences.txt
+
+Key bindings
 
     cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/Default\ \(OSX\).sublime-keymap  ~/Dropbox/backup/System-backup-list/sublime_keymap.txt
 
