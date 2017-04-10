@@ -3,9 +3,11 @@
 #-------------------------------------------------------------------
 # VVV Database backup
 # Make backups of all VVV databases -> Copy to Dropbox
-# Usage: ./vvv-mysql-backup.sh
+# Usage: ./system-backup-list-vvv-mysql.sh
 # Cron example: Make backups of all VVV databases every day at 9am monday-friday
 # Usage: 0 09 * * 1-5 cd /mypath && ./vvv-mysql-backup.sh >/dev/null 2>&1
+#
+# Note: Replace the ip address with your VVV ip
 #------------------------------------------------------------------
 
 # Paths
