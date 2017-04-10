@@ -40,3 +40,7 @@ crontab -l  > ~/Dropbox/backup/System-backup-list/cronjobs.txt
 
 ## VVV Customfile
 cat /Users/urbansanden/projects/vvv/Customfile > ~/Dropbox/backup/system-backup-list/customfile.txt
+
+## Sequel Pro
+cp '/Users/urbansanden/Library/Application Support/Sequel Pro/Data/Favorites.plist' ~/Dropbox/backup/system-backup-list/sequel-pro-favorites.txt
+cp '/Users/urbansanden/Library/Preferences/com.sequelpro.SequelPro.plist' ~/Dropbox/backup/system-backup-list/sequel-pro-plist.txt

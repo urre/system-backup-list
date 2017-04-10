@@ -46,6 +46,19 @@ username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/Backup/Sys
 ### VVV Customfile
     cat /Users/urbansanden/projects/vvv/Customfile > ~/Dropbox/backup/system-backup-list/customfile.txt
 
+### Sequel Pro
+
+    cp '/Users/urbansanden/Library/Application Support/Sequel Pro/Data/Favorites.plist' ~/Dropbox/backup/System-backup-list/sequel-pro-favorites.txt
+
+    cp '/Users/urbansanden/Library/Preferences/com.sequelpro.SequelPro.plist' ~/Dropbox/backup/System-backup-list/sequel-pro-plist.txt
+
+Note: 
+
++ Quit Sequel Pro if it’s running.
++ Replace ~/Library/Application Support/Sequel Pro/Data/+ Favourites.plist with your backed up copy.
++ Replace ~/Library/Preferences/com.sequelpro.SequelPro.plist with + your backed up copy.
++ Fire up Sequel Pro and you should be back in business.
+
 ## Update
 
 Recently added a backup script for backuping databases inside [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV)
