@@ -35,6 +35,9 @@ cp ~/.gitconfig ~/Dropbox/backup/system-backup-list/gitconfig.txt
 cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/Preferences.sublime-settings  ~/Dropbox/backup/system-backup-list/sublime_preferences.txt
 cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/Default\ \(OSX\).sublime-keymap  ~/Dropbox/backup/system-backup-list/sublime_keymap.txt
 
+# Sublime Linter settings
+cat /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/SublimeLinter.sublime-settings > ~/Dropbox/backup/system-backup-list/sublime_linter_settings.txt
+
 # Crontab
 crontab -l  > ~/Dropbox/backup/system-backup-list/cronjobs.txt
 
@@ -44,6 +47,9 @@ cat /Users/urbansanden/projects/vvv/Customfile > ~/Dropbox/backup/system-backup-
 # VVV vvv-custom.yml
 cat /Users/urbansanden/projects/vvv/vvv-custom.yml > ~/Dropbox/backup/system-backup-list/vvv-custom.txt
 
-## Sequel Pro
+# Sequel Pro
 cp '/Users/urbansanden/Library/Application Support/Sequel Pro/Data/Favorites.plist' ~/Dropbox/backup/system-backup-list/sequel-pro-favorites.txt
 cp '/Users/urbansanden/Library/Preferences/com.sequelpro.SequelPro.plist' ~/Dropbox/backup/system-backup-list/sequel-pro-plist.txt
+
+# Hyper
+cat /Users/urbansanden/.hyper.js  > ~/Dropbox/backup/system-backup-list/hyper.txt
