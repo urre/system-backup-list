@@ -38,6 +38,10 @@ cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/D
 # Sublime Linter settings
 cat /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/SublimeLinter.sublime-settings > ~/Dropbox/backup/system-backup-list/sublime_linter_settings.txt
 
+# VSCode settings and keybindings
+cat /Users/urbansanden/Library/Application*Support/Code/User/settings.json > ~/Dropbox/backup/system-backup-list/vscode_settings.json
+cat /Users/urbansanden/Library/Application*Support/Code/User/keybindings.json > ~/Dropbox/backup/system-backup-list/vscode_keybindings.json
+
 # Crontab
 crontab -l  > ~/Dropbox/backup/system-backup-list/cronjobs.txt
 
