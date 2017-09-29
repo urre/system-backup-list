@@ -29,14 +29,14 @@ MYSQLDUMP=/usr/bin/mysqldump
 
 sudo mkdir -p "$BACKUP_DIR/"
 sudo chmod -R 777 "$BACKUP_DIR/"
- 
+
 databases=`$MYSQL --user=$MYSQL_USER -p$MYSQL_PASSWORD -e "SHOW DATABASES;" | grep -Ev "(Database|information_schema|performance_schema)"`
- 
+
 for db in $databases; do
   sudo $MYSQLDUMP --force --opt --user=$MYSQL_USER -p$MYSQL_PASSWORD --databases $db | gzip > "$BACKUP_DIR/$db-$TIMESTAMP.gz"
 done
 
 ENDSSH
 
-# 2. Copy db backups to Dropbox
+# 2. Copy db backups to Dropbox (optional)
 cp -r ${LOCAL_BACKUP_DIR} ${DROPBOX}

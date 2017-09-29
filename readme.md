@@ -4,61 +4,58 @@ Just a simple way to backup a list of apps, fonts and packages you have installe
 
 ## Manually
 
-### Apps
-    cd /Applications && ls > ~/Dropbox/Backup/System-backup-list/apps.txt
+##### Apps
+cd /Applications && ls > ~/Dropbox/backup/system-backup-list/apps.txt
 
-### Homebrew
-    /usr/local/bin/brew list > ~/Dropbox/Backup/System-backup-list/brew.txt
+##### Homebrew
+/usr/local/bin/brew list > ~/Dropbox/backup/system-backup-list/brew.txt
 
-### NPM modules installed globally
-    cd /usr/local/lib/node_modules && ls > ~/Dropbox/Backup/System-backup-list/npm.txt
+### NPM
+cd /usr/local/lib/node_modules && ls > ~/Dropbox/backup/system-backup-list/npm.txt
 
 ### Fonts
-    cd /Library/Fonts/ && ls > ~/Dropbox/Backup/System-backup-list/fonts.txt
+cd /Library/Fonts/ && ls > ~/Dropbox/Backup/system-backup-list/fonts.txt
+cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/Backup/system-backup-list/fonts-user.txt
 
-    username=$USER; cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/Backup/System-backup-list/fonts-user.txt
+##### Bash profile
+cat ~/.bash_profile > ~/Dropbox/backup/system-backup-list/bash_profile.txt
 
-### Bash profile
-    cat ~/.bash_profile > ~/Dropbox/backup/system-backup-list/bash_profile.txt
-
-### Bash aliases
-    cat ~/.aliases > ~/Dropbox/backup/System-backup-list/aliases.txt
+### Aliases
+cat ~/.aliases > ~/Dropbox/backup/system-backup-list/aliases.txt
 
 ### SSH config
-    cp ~/.ssh/config ~/Dropbox/backup/System-backup-list/ssh_config.txt
+cp ~/.ssh/config ~/Dropbox/backup/system-backup-list/ssh_config.txt
 
-### Hosts file
-    cp /etc/hosts ~/Dropbox/backup/System-backup-list/hosts.txt
+### Hosts
+cp /etc/hosts ~/Dropbox/backup/system-backup-list/hosts.txt
 
-### Apache VHosts
-    cp /etc/apache2/extra/httpd-vhosts.conf ~/Dropbox/backup/System-backup-list/vhosts.conf.txt
+### macOS built in Apache
+cp /etc/apache2/extra/httpd-vhosts.conf ~/Dropbox/backup/system-backup-list/vhosts.conf.txt
 
 ### Gitconfig
-    cp ~/.gitconfig ~/Dropbox/backup/System-backup-list/gitconfig.txt
+cp ~/.gitconfig ~/Dropbox/backup/system-backup-list/gitconfig.txt
 
-### Sublime
-
-Settings
-
-    cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/Preferences.sublime-settings  ~/Dropbox/backup/System-backup-list/sublime_preferences.txt
-
-Key bindings
-
-    cp /Users/urbansanden/Library/Application*Support/Sublime*Text*3/Packages/User/Default\ \(OSX\).sublime-keymap  ~/Dropbox/backup/System-backup-list/sublime_keymap.txt
+### VSCode settings and keybindings
+cat /Users/${username}/Library/Application*Support/Code/User/settings.json > ~/Dropbox/backup/system-backup-list/vscode_settings.json
+cat /Users/${username}/Library/Application*Support/Code/User/keybindings.json > ~/Dropbox/backup/system-backup-list/vscode_keybindings.json
 
 ### Crontab
-    crontab -l  > ~/Dropbox/backup/System-backup-list/cronjobs.txt
+crontab -l  > ~/Dropbox/backup/system-backup-list/cronjobs.txt
 
 ### VVV Customfile
-    cat /Users/urbansanden/projects/vvv/Customfile > ~/Dropbox/backup/system-backup-list/customfile.txt
+cat /Users/${username}/projects/vvv/Customfile > ~/Dropbox/backup/system-backup-list/customfile.txt
+
+### VVV vvv-custom.yml
+cat /Users/${username}/projects/vvv/vvv-custom.yml > ~/Dropbox/backup/system-backup-list/vvv-custom.txt
+
+### Hyper
+cat /Users/${username}/.hyper.js  > ~/Dropbox/backup/system-backup-list/hyper.txt
 
 ### Sequel Pro
+cp /Users/$username/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist ~/Dropbox/backup/system-backup-list/sequel-pro-favorites.txt
+cp /Users/${username}/Library/Preferences/com.sequelpro.SequelPro.plist ~/Dropbox/backup/system-backup-list/sequel-pro-plist.txt
 
-    cp '/Users/urbansanden/Library/Application Support/Sequel Pro/Data/Favorites.plist' ~/Dropbox/backup/System-backup-list/sequel-pro-favorites.txt
-
-    cp '/Users/urbansanden/Library/Preferences/com.sequelpro.SequelPro.plist' ~/Dropbox/backup/System-backup-list/sequel-pro-plist.txt
-
-Note: 
+Note:
 
 + Quit Sequel Pro if it’s running.
 + Replace ~/Library/Application Support/Sequel Pro/Data/+ Favourites.plist with your backed up copy.
@@ -69,12 +66,12 @@ Note:
 
 Recently added a backup script for backuping databases inside [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV)
 
-    ./vvv-mysql-backup.sh
+    ./system-backup-list-vvv-mysql-backup.sh
 
 ## Notes
 
 Of course, change all this to your taste/needs.
-I'm using the full paths to some of the binaries here. You can also just use ``brew`` or ``npm``, but that might not work correctly when you use it in Automator or with Alfred. 
+I'm using the full paths to some of the binaries here. You can also just use ``brew`` or ``npm``, but that might not work correctly when you use it in Automator or with Alfred.
 
 <img src="https://cloud.githubusercontent.com/assets/307676/14966900/ee944d8c-10b4-11e6-822b-1c8e0329eb39.jpg" alt="Cron" height="100">
 
