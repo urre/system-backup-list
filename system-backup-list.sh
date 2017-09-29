@@ -33,9 +33,10 @@ cp /etc/apache2/extra/httpd-vhosts.conf ~/Dropbox/backup/system-backup-list/vhos
 # Gitconfig
 cp ~/.gitconfig ~/Dropbox/backup/system-backup-list/gitconfig.txt
 
-# VSCode settings and keybindings
+# VSCode
 cat /Users/${username}/Library/Application*Support/Code/User/settings.json > ~/Dropbox/backup/system-backup-list/vscode_settings.json
 cat /Users/${username}/Library/Application*Support/Code/User/keybindings.json > ~/Dropbox/backup/system-backup-list/vscode_keybindings.json
+cd ~/.vscode/extensions && ls > ~/Dropbox/backup/system-backup-list/vscode_extensions.json
 
 # Crontab
 crontab -l  > ~/Dropbox/backup/system-backup-list/cronjobs.txt
