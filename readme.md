@@ -2,7 +2,7 @@
 
 Just a simple way to backup a list of apps, fonts and packages you have installed on your Mac -> Dropbox. Run manually or schedule. Simple and for everyone.
 
-## A list of the following settings/
+## The script will backup this to your Dropbox
 
 + Mac Apps (A list of the installed apps)
 + Homebrew (A list of the installed packages)
