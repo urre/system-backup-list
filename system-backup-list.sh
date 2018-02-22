@@ -54,7 +54,4 @@ cat /Users/${USERNAME}/projects/vvv/vvv-custom.yml > ${DROPBOX_FOLDER}/vvv-custo
 cp /Users/$USERNAME/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist ${DROPBOX_FOLDER}/sequel-pro-favorites.txt
 cp /Users/${USERNAME}/Library/Preferences/com.sequelpro.SequelPro.plist ${DROPBOX_FOLDER}/sequel-pro-plist.txt
 
-# Hyper
-cat /Users/${USERNAME}/.hyper.js  > ${DROPBOX_FOLDER}/hyper.txt
-
 echo "$(tput setaf 2)✔ Backup finished!$(tput sgr0)"
