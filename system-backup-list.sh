@@ -1,55 +1,60 @@
 #!/bin/bash
 
-username=$USER;
+clear
+
+USERNAME=$USER;
+DROPBOX_FOLDER="/Users/${USERNAME}/Dropbox/backup/system-backup-list"
 
 # Apps
-cd /Applications && ls > ~/Dropbox/backup/system-backup-list/apps.txt
+cd /Applications && ls > ${DROPBOX_FOLDER}/apps.txt
 
 # Homebrew
-/usr/local/bin/brew list > ~/Dropbox/backup/system-backup-list/brew.txt
+/usr/local/bin/brew list > ${DROPBOX_FOLDER}/brew.txt
 
 # NPM
-cd /usr/local/lib/node_modules && ls > ~/Dropbox/backup/system-backup-list/npm.txt
+cd /usr/local/lib/node_modules && ls > ${DROPBOX_FOLDER}/npm.txt
 
 # Fonts
-cd /Library/Fonts/ && ls > ~/Dropbox/Backup/system-backup-list/fonts.txt
-cd /Users/${username}/Library/Fonts && ls > ~/Dropbox/Backup/system-backup-list/fonts-user.txt
+cd /Library/Fonts/ && ls > ${DROPBOX_FOLDER}/fonts.txt
+cd /Users/${USERNAME}/Library/Fonts && ls > ${DROPBOX_FOLDER}/fonts-user.txt
 
 # Bash profile
-cat ~/.bash_profile > ~/Dropbox/backup/system-backup-list/bash_profile.txt
+cat ~/.bash_profile > ${DROPBOX_FOLDER}/bash_profile.txt
 
 # Aliases
-cat ~/.aliases > ~/Dropbox/backup/system-backup-list/aliases.txt
+cat ~/.aliases > ${DROPBOX_FOLDER}/aliases.txt
 
 # SSH
-cp ~/.ssh/config ~/Dropbox/backup/system-backup-list/ssh_config.txt
+cp ~/.ssh/config ${DROPBOX_FOLDER}/ssh_config.txt
 
 # Hosts
-cp /etc/hosts ~/Dropbox/backup/system-backup-list/hosts.txt
+cp /etc/hosts ${DROPBOX_FOLDER}/hosts.txt
 
 # Apache
-cp /etc/apache2/extra/httpd-vhosts.conf ~/Dropbox/backup/system-backup-list/vhosts.conf.txt
+cp /etc/apache2/extra/httpd-vhosts.conf ${DROPBOX_FOLDER}/vhosts.conf.txt
 
 # Gitconfig
-cp ~/.gitconfig ~/Dropbox/backup/system-backup-list/gitconfig.txt
+cp ~/.gitconfig ${DROPBOX_FOLDER}/gitconfig.txt
 
 # VSCode
-cat /Users/${username}/Library/Application*Support/Code/User/settings.json > ~/Dropbox/backup/system-backup-list/vscode_settings.json
-cat /Users/${username}/Library/Application*Support/Code/User/keybindings.json > ~/Dropbox/backup/system-backup-list/vscode_keybindings.json
-cd ~/.vscode/extensions && ls > ~/Dropbox/backup/system-backup-list/vscode_extensions.json
+cat /Users/${USERNAME}/Library/Application*Support/Code/User/settings.json > ${DROPBOX_FOLDER}/vscode_settings.json
+cat /Users/${USERNAME}/Library/Application*Support/Code/User/keybindings.json > ${DROPBOX_FOLDER}/vscode_keybindings.json
+cd ~/.vscode/extensions && ls > ${DROPBOX_FOLDER}/vscode_extensions.json
 
 # Crontab
-crontab -l  > ~/Dropbox/backup/system-backup-list/cronjobs.txt
+crontab -l  > ${DROPBOX_FOLDER}/cronjobs.txt
 
 # VVV Customfile
-cat /Users/${username}/projects/vvv/Customfile > ~/Dropbox/backup/system-backup-list/customfile.txt
+cat /Users/${USERNAME}/projects/vvv/Customfile > ${DROPBOX_FOLDER}/customfile.txt
 
 # VVV vvv-custom.yml
-cat /Users/${username}/projects/vvv/vvv-custom.yml > ~/Dropbox/backup/system-backup-list/vvv-custom.txt
+cat /Users/${USERNAME}/projects/vvv/vvv-custom.yml > ${DROPBOX_FOLDER}/vvv-custom.txt
 
 # Sequel Pro
-cp /Users/$username/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist ~/Dropbox/backup/system-backup-list/sequel-pro-favorites.txt
-cp /Users/${username}/Library/Preferences/com.sequelpro.SequelPro.plist ~/Dropbox/backup/system-backup-list/sequel-pro-plist.txt
+cp /Users/$USERNAME/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist ${DROPBOX_FOLDER}/sequel-pro-favorites.txt
+cp /Users/${USERNAME}/Library/Preferences/com.sequelpro.SequelPro.plist ${DROPBOX_FOLDER}/sequel-pro-plist.txt
 
 # Hyper
-cat /Users/${username}/.hyper.js  > ~/Dropbox/backup/system-backup-list/hyper.txt
+cat /Users/${USERNAME}/.hyper.js  > ${DROPBOX_FOLDER}/hyper.txt
+
+echo "$(tput setaf 2)✔ Backup finished!$(tput sgr0)"

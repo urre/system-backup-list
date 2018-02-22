@@ -6,19 +6,20 @@
 # Usage: ./system-backup-list-vvv-mysql.sh
 # Cron example: Make backups of all VVV databases every day at 9am monday-friday
 # Usage: 0 09 * * 1-5 cd /mypath && ./vvv-mysql-backup.sh >/dev/null 2>&1
-#
-# Note: Replace the ip address with your VVV ip
 #------------------------------------------------------------------
+
+clear
 
 # Paths
 username=$USER;
-vvv_path="/Users/${username}/projects/vvv"
+VVV_IP="192.168.50.4"
+VVV_PATH="/Users/${username}/projects/vvv"
 LOCAL_BACKUP_DIR="/Users/${username}/projects/vvv/www/db-backups/"
 DROPBOX="/Users/${username}/Dropbox/backup/system-backup-list/db-backups"
 
 # 1. Make db backups inside the VVV. Separate files for each database. Use gzip.
 # Notes. Point to your VVV ip and change the credentials you need. The default mysql user/password is root/root.
-ssh -i ${vvv_path}/.vagrant/machines/default/virtualbox/private_key vagrant@192.168.50.4  <<'ENDSSH'
+ssh vagrant@${VVV_IP}  <<'ENDSSH'
 
 TIMESTAMP=$(date +"%F")
 BACKUP_DIR="/srv/www/db-backups/"
@@ -40,3 +41,5 @@ ENDSSH
 
 # 2. Copy db backups to Dropbox (optional)
 cp -r ${LOCAL_BACKUP_DIR} ${DROPBOX}
+
+echo "$(tput setaf 2)✔ Backup finished!$(tput sgr0)"
