@@ -9,15 +9,13 @@ Just a simple way to backup a list of apps, fonts and packages you have installe
 + NPM (A list of the globally installed packages)
 + Fonts (A list of the installed fonts)
 + Bash profile (The current bash profile)
-+ Aliases (Aliases)
++ Aliases
 + SSH config
 + Hosts (The hosts file)
-+ Apache (The macOS built in one)
++ Apache (macOS built in)
 + Gitconfig
 + VSCode (Lists of the current Settings, Keybindings and Extensions)
 + Crontab (A list of the crontab)
-+ VVV Customfile
-+ VVV vvv-custom.yml
 + Sequel Pro (A lit of the Favorites)
 
 Note:
@@ -26,12 +24,6 @@ Note:
 + Replace ~/Library/Application Support/Sequel Pro/Data/+ Favourites.plist with your backed up copy.
 + Replace ~/Library/Preferences/com.sequelpro.SequelPro.plist with + your backed up copy.
 + Fire up Sequel Pro and you should be back in business.
-
-## Update
-
-Recently added a backup script for backuping databases inside [VVV](https://github.com/Varying-Vagrant-Vagrants/VVV)
-
-    ./system-backup-list-vvv-mysql-backup.sh
 
 ## Notes
 

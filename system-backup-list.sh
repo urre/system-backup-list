@@ -44,12 +44,6 @@ cd ~/.vscode/extensions && ls > ${DROPBOX_FOLDER}/vscode_extensions.json
 # Crontab
 crontab -l  > ${DROPBOX_FOLDER}/cronjobs.txt
 
-# VVV Customfile
-cat /Users/${USERNAME}/projects/vvv/Customfile > ${DROPBOX_FOLDER}/customfile.txt
-
-# VVV vvv-custom.yml
-cat /Users/${USERNAME}/projects/vvv/vvv-custom.yml > ${DROPBOX_FOLDER}/vvv-custom.txt
-
 # Sequel Pro
 cp /Users/$USERNAME/Library/Application\ Support/Sequel\ Pro/Data/Favorites.plist ${DROPBOX_FOLDER}/sequel-pro-favorites.txt
 cp /Users/${USERNAME}/Library/Preferences/com.sequelpro.SequelPro.plist ${DROPBOX_FOLDER}/sequel-pro-plist.txt
